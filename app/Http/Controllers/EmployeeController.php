@@ -1,5 +1,9 @@
 <?php
 
+// MODULO EN PRUEBAS - QUIERO REALIZAR LA CARGA DE DATOS DE LA API DESDE BACK
+// Actualmente se esta consumiendo la API desde el Front
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Http;

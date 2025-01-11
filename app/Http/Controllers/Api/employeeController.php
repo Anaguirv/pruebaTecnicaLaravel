@@ -17,7 +17,7 @@ class employeeController extends Controller
     */
     public function index()
     {
-        $employees = Employee::paginate(10);
+        $employees = Employee::paginate(5);
 
         if ($employees->isEmpty()){
             $data = [
@@ -34,7 +34,12 @@ class employeeController extends Controller
         return response()->json($data, 200);
     }
 
-
+    /**
+     * Obtiene los detalles de un empleado por ID.
+     *
+     * @param int $id ID del empleado.
+     * @return \Illuminate\Http\JsonResponse Respuesta JSON con los datos del empleado o un error 404.
+    */
     public function show($id)
     {
         $employee = Employee::find($id);

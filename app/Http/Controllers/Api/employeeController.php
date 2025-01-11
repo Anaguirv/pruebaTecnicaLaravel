@@ -17,7 +17,7 @@ class employeeController extends Controller
     */
     public function index()
     {
-        $employees = Employee::all();
+        $employees = Employee::paginate(10);
 
         if ($employees->isEmpty()){
             $data = [
